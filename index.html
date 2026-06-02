@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DashGo is a Next.js 12 and Chakra UI starter dashboard project with TypeScript, custom theme tokens and a simple React page scaffold." />
+    <meta name="author" content="Andressa Regina Lopes Celestino" />
+    <meta property="og:title" content="DashGo - Next.js Chakra Dashboard Starter" />
+    <meta property="og:description" content="A TypeScript dashboard starter using Next.js, React 18, Chakra UI, Emotion and a custom gray color system." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/AndressaCelestino/DashGo" />
+    <title>DashGo | Next.js Chakra Dashboard Starter</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "DashGo",
+        "description": "Next.js 12 dashboard starter with React 18, TypeScript, Chakra UI provider setup and custom theme tokens.",
+        "programmingLanguage": ["TypeScript", "TSX", "JavaScript"],
+        "runtimePlatform": "Node.js",
+        "codeRepository": "https://github.com/AndressaCelestino/DashGo",
+        "author": {
+          "@type": "Person",
+          "name": "Andressa Regina Lopes Celestino",
+          "url": "https://www.linkedin.com/in/andressa-regina-lopes-celestino-2a5ba1135/"
+        }
+      }
+    </script>
+    <style>
+      :root { --bg: #f7f8f4; --surface: #fff; --ink: #20251f; --muted: #677066; --line: #dfe4d8; --accent: #4f8d5f; --accent-dark: #25563a; --warm: #f0c35b; --chip: #edf5e8; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.62; }
+      header, section, footer { padding: 4rem max(1.25rem, calc((100vw - 1100px) / 2)); }
+      header { min-height: 72vh; display: grid; align-content: center; gap: 1.25rem; background: linear-gradient(135deg, rgba(79, 141, 95, 0.2), rgba(240, 195, 91, 0.18)), var(--surface); border-bottom: 1px solid var(--line); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { max-width: 780px; margin-bottom: 0; font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: 1.05; letter-spacing: 0; }
+      .eyebrow { margin: 0; color: var(--accent-dark); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+      .lead { max-width: 760px; color: var(--muted); font-size: 1.16rem; }
+      a { color: var(--accent-dark); }
+      .button { display: inline-flex; align-items: center; width: fit-content; min-height: 2.75rem; padding: 0 1rem; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 800; text-decoration: none; }
+      .panel, .feature { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+      .panel { padding: 1.5rem; }
+      .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+      .feature { padding: 1.15rem; }
+      .feature p, .panel p, li { color: var(--muted); }
+      code { border-radius: 4px; padding: 0.1rem 0.25rem; background: #f4efd9; color: #5b4510; }
+      .chips { display: flex; flex-wrap: wrap; gap: 0.65rem; padding: 0; list-style: none; }
+      .chips li { border-radius: 999px; padding: 0.45rem 0.75rem; background: var(--chip); color: var(--accent-dark); font-weight: 800; }
+      footer { background: #1f2a20; color: #fbfff8; }
+      footer p { max-width: 780px; color: #dce9d7; }
+      footer a { color: #bde8ba; }
+      @media (max-width: 840px) { header, section, footer { padding-block: 3rem; } .features { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">Next.js dashboard scaffold</p>
+      <h1>DashGo</h1>
+      <p class="lead">A TypeScript dashboard starter built on Next.js 12, React 18 and Chakra UI, with the application provider and custom design tokens already wired for future interface work.</p>
+      <a class="button" href="https://github.com/AndressaCelestino/DashGo">View repository</a>
+    </header>
+    <main>
+      <section id="overview">
+        <div class="panel"><h2>Overview</h2><p>The current app renders a simple <code>Dashgo</code> home page through <code>src/pages/index.tsx</code>. The important foundation lives in <code>_app.tsx</code>, where ChakraProvider wraps the Next app and injects a shared theme from <code>src/styles/theme.ts</code>.</p></div>
+      </section>
+      <section id="features">
+        <h2>Features</h2>
+        <div class="features">
+          <article class="feature"><h3>Next.js page structure</h3><p>Uses the classic <code>src/pages</code> router with a root page and custom app component.</p></article>
+          <article class="feature"><h3>Chakra provider</h3><p>Wraps every page with Chakra UI so components can share theme values and accessible primitives.</p></article>
+          <article class="feature"><h3>Custom gray palette</h3><p>Defines gray color tokens from 50 to 900 for a dashboard-oriented visual system.</p></article>
+          <article class="feature"><h3>Global styling</h3><p>Sets global body background and text colors through the Chakra theme layer.</p></article>
+          <article class="feature"><h3>TypeScript setup</h3><p>Includes Next, React and Node typings with a TypeScript configuration ready for typed components.</p></article>
+          <article class="feature"><h3>Development scripts</h3><p>Provides standard <code>dev</code>, <code>build</code>, <code>start</code> and <code>lint</code> package scripts.</p></article>
+        </div>
+      </section>
+      <section id="stack">
+        <h2>Tech Stack</h2>
+        <ul class="chips"><li>Next.js 12</li><li>React 18</li><li>TypeScript</li><li>Chakra UI</li><li>Emotion</li><li>Framer Motion</li></ul>
+      </section>
+      <section id="how-it-works">
+        <div class="panel"><h2>How It Works</h2><p>Run the app with the package manager scripts, then Next.js loads <code>src/pages/index.tsx</code>. Before rendering that page, <code>src/pages/_app.tsx</code> applies ChakraProvider and the extended theme so new dashboard screens can reuse the same base styling.</p></div>
+      </section>
+    </main>
+    <footer>
+      <h2>Author</h2>
+      <p><strong>Andressa Regina Lopes Celestino &mdash; Control &amp; Automation Engineer</strong><br />Develops typed web interfaces and dashboard foundations that turn structured data and operational workflows into clear user experiences. <a href="https://www.linkedin.com/in/andressa-regina-lopes-celestino-2a5ba1135/">LinkedIn profile</a></p>
+    </footer>
+  </body>
+</html>
